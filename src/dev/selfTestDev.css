@@ -1,0 +1,324 @@
+.sh-dev-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+  color: var(--text);
+}
+
+.sh-self-test-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.sh-self-test-center h1,
+.sh-diagnostics h2,
+.sh-audit-preview h2 {
+  color: var(--text-h);
+  font-family: var(--heading);
+  margin: 0 0 0.35rem;
+  font-size: 1.5rem;
+}
+
+.sh-subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.sh-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.sh-badge-mock {
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+}
+
+.sh-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.sh-status-card {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--social-bg);
+}
+
+.sh-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.25rem;
+}
+
+.sh-value {
+  font-size: 1.35rem;
+  color: var(--text-h);
+}
+
+.sh-value-sm {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.sh-status-pass {
+  border-color: #22c55e66;
+}
+.sh-status-warn {
+  border-color: #eab30866;
+}
+.sh-status-fail {
+  border-color: #ef444466;
+}
+
+.sh-run-btn {
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid var(--accent-border);
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sh-run-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.sh-diagnostics {
+  margin-top: 2rem;
+}
+
+.sh-diagnostics-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sh-diagnostic-row {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  background: var(--bg);
+}
+
+.sh-diagnostic-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sh-diagnostic-desc {
+  margin: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+.sh-diagnostic-meta {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.sh-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+
+.sh-pill-pass {
+  background: #22c55e22;
+  color: #16a34a;
+}
+.sh-pill-warn {
+  background: #eab30822;
+  color: #ca8a04;
+}
+.sh-pill-fail {
+  background: #ef444422;
+  color: #dc2626;
+}
+
+.sh-diagnostic-details {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.sh-issue-fail {
+  color: #dc2626;
+}
+.sh-issue-warn {
+  color: #ca8a04;
+}
+
+.sh-audit-preview {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.sh-audit-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  font-size: 0.85rem;
+}
+
+.sh-dev-footer {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+}
+
+.sh-home-dev-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent);
+}
+
+.sh-room-diagnostics,
+.sh-admin-ia,
+.sh-audit-panel {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.sh-room-diagnostics-header,
+.sh-audit-panel-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.sh-room-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.65rem;
+}
+
+.sh-room-card {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--social-bg);
+}
+
+.sh-room-card strong {
+  display: block;
+  color: var(--text-h);
+  font-size: 0.95rem;
+  word-break: break-all;
+}
+
+.sh-audit-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.sh-filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.sh-filter-field select,
+.sh-filter-field input {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-h);
+  min-width: 12rem;
+}
+
+.sh-filter-grow {
+  flex: 1;
+  min-width: 200px;
+}
+
+.sh-audit-preview-block {
+  margin-bottom: 1.25rem;
+}
+
+.sh-audit-preview-block h3,
+.sh-audit-table-wrap h3 {
+  font-size: 0.95rem;
+  color: var(--text-h);
+  margin: 0 0 0.5rem;
+}
+
+.sh-audit-table-wrap {
+  overflow-x: auto;
+}
+
+.sh-audit-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.sh-audit-table th,
+.sh-audit-table td {
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.5rem;
+  text-align: left;
+}
+
+.sh-audit-table th {
+  background: var(--social-bg);
+  color: var(--text-h);
+}
+
+.sh-admin-links {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.sh-admin-links li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.sh-admin-links a {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+}
+
+.sh-admin-link-primary {
+  font-weight: 700;
+}
+
+.sh-admin-link-label {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}

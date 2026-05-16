@@ -1,0 +1,135 @@
+.sh-admin-shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+.sh-admin-shell-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sh-admin-shell-header h1 {
+  margin: 0;
+  color: var(--text-h);
+}
+
+.sh-admin-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.sh-admin-nav a {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-h);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.sh-admin-nav a.sh-admin-nav-active {
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.sh-admin-nav-divider {
+  flex-basis: 100%;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.sh-post-change-banner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--border);
+}
+
+.sh-post-change-pass {
+  background: #22c55e14;
+}
+.sh-post-change-warn {
+  background: #eab30814;
+}
+.sh-post-change-fail {
+  background: #ef444414;
+}
+
+.sh-post-change-corr code {
+  font-size: 0.75rem;
+}
+
+.sh-admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+}
+
+.sh-admin-stats dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.sh-admin-stats dd {
+  margin: 0.25rem 0 0;
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.sh-admin-mock-btn {
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--social-bg);
+  color: var(--text-h);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.sh-admin-mock-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sh-scenario-toggle {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.sh-scenario-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.sh-scenario-btn {
+  font-size: 0.85rem;
+  padding: 0.45rem 0.85rem;
+}
+
+.sh-export-btn {
+  align-self: flex-end;
+  font-size: 0.85rem;
+  padding: 0.45rem 0.85rem;
+}
