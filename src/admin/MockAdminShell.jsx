@@ -7,6 +7,12 @@ import { AdminReportsPage } from './pages/AdminReportsPage.jsx'
 import { AdminRoomsPage } from './pages/AdminRoomsPage.jsx'
 import { AdminFeesPage } from './pages/AdminFeesPage.jsx'
 import { AdminRecoveryPage } from './pages/AdminRecoveryPage.jsx'
+import { AdminShortsQueuePage } from './pages/AdminShortsQueuePage.jsx'
+import { AdminWatchersPage } from './pages/AdminWatchersPage.jsx'
+import { AdminViralPage } from './pages/AdminViralPage.jsx'
+import { OverlaySceneManagerPage } from './pages/OverlaySceneManagerPage.jsx'
+import { GlobalProfileChip } from '../components/profile/GlobalProfileChip.jsx'
+import { GlobalCommandButton } from '../components/command/GlobalCommandPalette.jsx'
 import '../dev/selfTestDev.css'
 import './adminShell.css'
 
@@ -61,13 +67,25 @@ export function MockAdminShell({ pageId }) {
         onSessionChange={() => setSessionTick((n) => n + 1)}
       />
     )
+  } else if (activeId === 'shorts') {
+    page = <AdminShortsQueuePage />
+  } else if (activeId === 'watchers') {
+    page = <AdminWatchersPage />
+  } else if (activeId === 'viral') {
+    page = <AdminViralPage />
+  } else if (activeId === 'overlayScenes') {
+    page = <OverlaySceneManagerPage />
   }
 
   return (
     <main className="sh-admin-shell" data-testid="mock-admin-shell">
       <header className="sh-admin-shell-header">
         <h1>StreamHub Admin</h1>
-        <span className="sh-badge sh-badge-mock">MOCK ONLY</span>
+        <div className="sh-admin-shell-header-actions">
+          <GlobalCommandButton />
+          <GlobalProfileChip />
+          <span className="sh-badge sh-badge-mock">MOCK ONLY</span>
+        </div>
       </header>
       <AdminNav activePageId={activeId} />
       <PostChangeValidationBanner lastResult={postChange} />

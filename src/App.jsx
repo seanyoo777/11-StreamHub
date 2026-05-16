@@ -8,6 +8,12 @@ import { SelfTestDevPage } from './dev/SelfTestDevPage.jsx'
 import { usePathname } from './dev/usePathname.js'
 import { STREAMHUB_ADMIN_SHELL_ROUTES } from './validation/contracts/adminRoutes.js'
 import { STREAMHUB_DEV_ROUTES } from './validation/contracts/routes.js'
+import { GlobalProfileChip } from './components/profile/GlobalProfileChip.jsx'
+import {
+  GlobalCommandButton,
+  GlobalCommandPalette,
+  useStreamHubCommandShortcut,
+} from './components/command/GlobalCommandPalette.jsx'
 import './App.css'
 
 function HomePage() {
@@ -21,8 +27,14 @@ function HomePage() {
           <img src={reactLogo} className="framework" alt="React logo" />
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
-        <div>
+        <div className="sh-home-header-row">
           <h1>StreamHub</h1>
+          <div className="sh-home-header-actions">
+            <GlobalCommandButton />
+            <GlobalProfileChip />
+          </div>
+        </div>
+        <div>
           <p>
             MVP shell — mock-first planning.{' '}
             <a href={STREAMHUB_DEV_ROUTES.selfTest} className="sh-home-dev-link">
@@ -31,6 +43,10 @@ function HomePage() {
             {' · '}
             <a href={STREAMHUB_ADMIN_SHELL_ROUTES.dashboard} className="sh-home-dev-link">
               Mock Admin
+            </a>
+            {' · '}
+            <a href={STREAMHUB_ADMIN_SHELL_ROUTES.shorts} className="sh-home-dev-link">
+              Shorts Queue
             </a>
           </p>
         </div>
@@ -62,17 +78,22 @@ function HomePage() {
 }
 
 function App() {
+  useStreamHubCommandShortcut()
   const pathname = usePathname()
 
+  let page = <HomePage />
   if (pathname === STREAMHUB_DEV_ROUTES.selfTest) {
-    return <SelfTestDevPage />
+    page = <SelfTestDevPage />
+  } else if (isAdminShellPath(pathname)) {
+    page = <MockAdminShell pageId={resolveAdminPageId(pathname)} />
   }
 
-  if (isAdminShellPath(pathname)) {
-    return <MockAdminShell pageId={resolveAdminPageId(pathname)} />
-  }
-
-  return <HomePage />
+  return (
+    <>
+      {page}
+      <GlobalCommandPalette />
+    </>
+  )
 }
 
 export default App

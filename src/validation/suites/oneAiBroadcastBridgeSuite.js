@@ -10,6 +10,7 @@ import {
   ONEAI_STREAM_OVERLAY_ROUTES,
   ONEAI_STREAMHUB_OVERLAY_STORAGE_KEY,
   ONEAI_STREAMHUB_SHORTS_DRAFTS_KEY,
+  ONEAI_STOCKPICK_SHORTS_CANDIDATES_KEY,
 } from '../contracts/oneAiBridge.js'
 import { buildSuite, issue } from './helpers.js'
 
@@ -35,6 +36,21 @@ export function runOneAiBroadcastBridgeSuite() {
       issue(
         `${SUITE_ID}.overlay.key.ok`,
         `overlay key ${ONEAI_STREAMHUB_OVERLAY_STORAGE_KEY}`,
+        'PASS',
+        SUITE_ID,
+      ),
+    )
+  }
+
+  if (!ONEAI_STOCKPICK_SHORTS_CANDIDATES_KEY.includes('stockpick')) {
+    issues.push(
+      issue(`${SUITE_ID}.stockpick.key`, 'stock pick candidates key mismatch', 'FAIL', SUITE_ID),
+    )
+  } else {
+    issues.push(
+      issue(
+        `${SUITE_ID}.stockpick.key.ok`,
+        `stock pick key ${ONEAI_STOCKPICK_SHORTS_CANDIDATES_KEY} (reader stub)`,
         'PASS',
         SUITE_ID,
       ),

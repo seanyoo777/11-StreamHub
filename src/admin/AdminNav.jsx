@@ -7,6 +7,14 @@ const NAV_ITEMS = [
   { id: 'rooms', label: 'Rooms', path: STREAMHUB_ADMIN_SHELL_ROUTES.rooms },
   { id: 'fees', label: 'Fees', path: STREAMHUB_ADMIN_SHELL_ROUTES.fees },
   { id: 'recovery', label: 'Recovery', path: STREAMHUB_ADMIN_SHELL_ROUTES.recovery },
+  { id: 'shorts', label: 'Shorts Queue', path: STREAMHUB_ADMIN_SHELL_ROUTES.shorts },
+  { id: 'watchers', label: 'Watchers', path: STREAMHUB_ADMIN_SHELL_ROUTES.watchers },
+  { id: 'viral', label: 'Viral Score', path: STREAMHUB_ADMIN_SHELL_ROUTES.viral },
+  {
+    id: 'overlayScenes',
+    label: 'Overlay Scenes',
+    path: STREAMHUB_ADMIN_SHELL_ROUTES.overlayScenes,
+  },
 ]
 
 /**

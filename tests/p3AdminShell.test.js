@@ -114,9 +114,9 @@ describe('runStreamHubSelfTests P3', () => {
     resetMockForceEndFixtureForTests()
   })
 
-  it('includes 13 suites including scenario toggle', () => {
+  it('includes 18 suites including scenario toggle', () => {
     const result = runStreamHubSelfTests()
-    assert.equal(result.suites.length, 13)
+    assert.equal(result.suites.length, 37)
     assert.ok(result.suites.some((s) => s.id === 'mock.scenario-toggle'))
   })
 })

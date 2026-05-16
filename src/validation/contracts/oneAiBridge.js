@@ -8,6 +8,9 @@ export const ONEAI_STREAMHUB_OVERLAY_STORAGE_KEY = 'oneai.streamhub.overlay'
 
 export const ONEAI_STREAMHUB_SHORTS_DRAFTS_KEY = 'oneai.streamhub.shorts_drafts_v1'
 
+/** Written by 03-OneAI AI Stock Pick; read by StreamHub stock pick reader stub */
+export const ONEAI_STOCKPICK_SHORTS_CANDIDATES_KEY = 'oneai.stockpick.shorts_candidates_v1'
+
 /** Query params served by OneAI App.tsx standalone overlay routes. */
 export const ONEAI_STREAM_OVERLAY_ROUTES = Object.freeze({
   event: '?overlay=event',

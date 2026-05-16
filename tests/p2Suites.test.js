@@ -71,9 +71,9 @@ describe('runStreamHubSelfTests P2', () => {
     resetMockForceEndFixtureForTests()
   })
 
-  it('includes 13 suites', () => {
+  it('includes 18 suites', () => {
     const result = runStreamHubSelfTests()
-    assert.equal(result.suites.length, 13)
+    assert.equal(result.suites.length, 37)
     const ids = result.suites.map((s) => s.id)
     assert.ok(ids.includes('contract.room-session'))
     assert.ok(ids.includes('contract.chat-seq'))

@@ -1,6 +1,6 @@
 import { STREAMHUB_ADMIN_SHELL_ROUTES } from '../validation/contracts/adminRoutes.js'
 
-/** @typedef {'dashboard' | 'reports' | 'rooms' | 'fees' | 'recovery' | null} AdminPageId */
+/** @typedef {'dashboard' | 'reports' | 'rooms' | 'fees' | 'recovery' | 'shorts' | 'watchers' | 'viral' | 'overlayScenes' | null} AdminPageId */
 
 /**
  * @param {string} pathname

@@ -11,6 +11,10 @@ export const STREAMHUB_ADMIN_ROUTES = Object.freeze({
   banners: '/admin/banners',
   fees: '/admin/fees',
   recovery: '/admin/recovery',
+  shorts: '/admin/shorts',
+  watchers: '/admin/watchers',
+  viral: '/admin/viral',
+  overlayScenes: '/admin/overlay-scenes',
 })
 
 /** P3 mock admin shell primary pages */
@@ -20,6 +24,10 @@ export const STREAMHUB_ADMIN_SHELL_ROUTES = Object.freeze({
   rooms: '/admin/rooms',
   fees: '/admin/fees',
   recovery: '/admin/recovery',
+  shorts: '/admin/shorts',
+  watchers: '/admin/watchers',
+  viral: '/admin/viral',
+  overlayScenes: '/admin/overlay-scenes',
 })
 
 export const STREAMHUB_ADMIN_SHELL_PATHS = Object.freeze(

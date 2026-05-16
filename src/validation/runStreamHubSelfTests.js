@@ -16,8 +16,32 @@ import { runRecoveryResyncContractSuite } from './suites/recoveryResyncContractS
 import { runRoomSessionContractSuite } from './suites/roomSessionContractSuite.js'
 import { runRouteContractSuite } from './suites/routeContractSuite.js'
 import { runOneAiBroadcastBridgeSuite } from './suites/oneAiBroadcastBridgeSuite.js'
+import { runAutoClipDetectorSuite } from './suites/autoClipDetectorSuite.js'
 import { runScenarioToggleSuite } from './suites/scenarioToggleSuite.js'
+import { runShortsOperatorFlowSuite } from './suites/shortsOperatorFlowSuite.js'
+import { runContentSafetySchemaSuite } from './suites/contentSafetySchemaSuite.js'
+import { runContentSafetyShortsGateSuite } from './suites/contentSafetyShortsGateSuite.js'
+import { runMockContentSafetyEngineSuite } from './suites/mockContentSafetyEngineSuite.js'
+import { runChannelWatcherSchemaSuite } from './suites/channelWatcherSchemaSuite.js'
+import { runContentFactoryFlowSuite } from './suites/contentFactoryFlowSuite.js'
+import { runStockPickReaderFlowSuite } from './suites/stockPickReaderFlowSuite.js'
+import { runViralScoreSchemaSuite } from './suites/viralScoreSchemaSuite.js'
+import { runViralScoreEngineSuite } from './suites/viralScoreEngineSuite.js'
+import { runOverlaySceneSchemaSuite } from './suites/overlaySceneSchemaSuite.js'
+import { runOverlaySceneManagerSuite } from './suites/overlaySceneManagerSuite.js'
+import { runViralTrendReaderSchemaSuite } from './suites/viralTrendReaderSchemaSuite.js'
+import { runOverlayEventLayerSchemaSuite } from './suites/overlayEventLayerSchemaSuite.js'
+import { runOverlayEventLayerFlowSuite } from './suites/overlayEventLayerFlowSuite.js'
+import { runOverlayPresetSchemaSuite } from './suites/overlayPresetSchemaSuite.js'
+import { runOverlayPresetManagerSuite } from './suites/overlayPresetManagerSuite.js'
+import { runTrendReaderFlowSuite } from './suites/trendReaderFlowSuite.js'
+import { runClipTimelineEditorSuite } from './suites/clipTimelineEditorSuite.js'
+import { runClipTimelineSchemaSuite } from './suites/clipTimelineSchemaSuite.js'
+import { runTrendWatcherSchemaSuite } from './suites/trendWatcherSchemaSuite.js'
+import { runShortsQueueSchemaSuite } from './suites/shortsQueueSchemaSuite.js'
 import { runStreamhubErrorContractSuite } from './suites/streamhubErrorContractSuite.js'
+import { runProfileChipSuite } from './suites/profileChipSuite.js'
+import { runCommandPaletteSuite } from './suites/commandPaletteSuite.js'
 
 /**
  * Pure mock-first self-test runner (no network, no WebSocket).
@@ -33,6 +57,28 @@ export function runStreamHubSelfTests(options = {}) {
   const suites = [
     runRouteContractSuite(),
     runOneAiBroadcastBridgeSuite(),
+    runShortsQueueSchemaSuite(),
+    runContentSafetySchemaSuite(),
+    runMockContentSafetyEngineSuite(),
+    runContentSafetyShortsGateSuite(),
+    runAutoClipDetectorSuite(),
+    runShortsOperatorFlowSuite(),
+    runClipTimelineSchemaSuite(),
+    runClipTimelineEditorSuite(),
+    runChannelWatcherSchemaSuite(),
+    runTrendWatcherSchemaSuite(),
+    runContentFactoryFlowSuite(),
+    runStockPickReaderFlowSuite(),
+    runTrendReaderFlowSuite(),
+    runViralScoreSchemaSuite(),
+    runViralScoreEngineSuite(),
+    runOverlaySceneSchemaSuite(),
+    runOverlaySceneManagerSuite(),
+    runViralTrendReaderSchemaSuite(),
+    runOverlayEventLayerSchemaSuite(),
+    runOverlayEventLayerFlowSuite(),
+    runOverlayPresetSchemaSuite(),
+    runOverlayPresetManagerSuite(),
     runAdminIaRouteSuite(),
     runRoomSessionContractSuite(),
     runChatSeqContractSuite(),
@@ -55,6 +101,8 @@ export function runStreamHubSelfTests(options = {}) {
     runAdminMockFlowSuite(),
     runAdminForceEndSuite(),
     runScenarioToggleSuite(),
+    runProfileChipSuite(),
+    runCommandPaletteSuite(),
   ]
 
   const result = buildSelfTestResult({

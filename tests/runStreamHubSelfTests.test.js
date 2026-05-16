@@ -16,7 +16,7 @@ describe('runStreamHubSelfTests', () => {
     const result = runStreamHubSelfTests()
     assert.equal(result.mockOnly, true)
     assert.ok(['PASS', 'WARN'].includes(result.overall))
-    assert.ok(result.suites.length >= 12)
+    assert.ok(result.suites.length >= 16)
     assert.ok(result.suites.some((s) => s.id === 'contract.realtime-schema'))
     assert.ok(result.suites.some((s) => s.id === 'contract.oneai-broadcast-bridge'))
     assert.ok(result.suites.some((s) => s.id === 'mock.admin.flow'))

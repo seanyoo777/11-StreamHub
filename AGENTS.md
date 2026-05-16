@@ -41,6 +41,14 @@ StreamHub mapping:
 | Dev UI | `/dev/self-test` — Center, Diagnostics, Audit, scenarios |
 | Mock admin | `/admin/dashboard` … `/admin/recovery` — post-change validation on action |
 | Audit export | `auditExport.js` + `downloadAuditExportClient` (client-only JSON) |
+| Shorts Queue | `/admin/shorts` · `src/shorts/*` · `docs/SHORTS_QUEUE.md` |
+| Content Safety | `src/shorts/safety/*` · upload guard mock · `docs/CONTENT_SAFETY_REVIEW.md` |
+| Clip Timeline Editor | `src/shorts/editor/*` · `src/shorts/ui/ClipTimelineEditor*` · `docs/CLIP_TIMELINE_EDITOR.md` |
+| Channel / Trend Watcher | `src/watchers/*` · `/admin/watchers` · `docs/AI_CHANNEL_WATCHER.md` · `docs/TREND_CONTENT_FACTORY.md` |
+| OneAI Stock Pick reader | `src/oneai/stockpick/*` · `/admin/shorts` · `docs/ONEAI_STOCK_PICK_SHORTS_READER.md` |
+| Viral Trend Radar reader | `src/oneai/trends/*` · `/admin/shorts` · `/admin/overlay-scenes` · `docs/VIRAL_TREND_READER.md` |
+| Viral Score Engine | `src/viral/*` · `/admin/viral` · `docs/VIRAL_SCORE_ENGINE.md` |
+| OBS Overlay Scene Manager | `src/overlay-scenes/*` · `/admin/overlay-scenes` · `docs/OBS_OVERLAY_SCENE_MANAGER.md` |
 | Suites | `src/validation/suites/*` |
 | Mock audit | `src/validation/mockAuditTrail.js` |
 | Smoke | `scripts/smoke.mjs` |

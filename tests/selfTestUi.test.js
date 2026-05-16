@@ -37,7 +37,7 @@ describe('Self-Test UI view models (panel rendering)', () => {
     const rows = getDiagnosticsViewModel(result)
 
     assert.equal(rows.length, DIAGNOSTICS_SECTIONS.length)
-    assert.equal(rows.length, 12)
+    assert.equal(rows.length, 35)
 
     const routeRow = rows.find((r) => r.suiteId === 'contract.route-ia')
     assert.equal(routeRow?.label, 'Route contract')

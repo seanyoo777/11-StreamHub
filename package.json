@@ -5,16 +5,19 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "npm run build --prefix ../packages/self-test-core && npm run build --prefix ../packages/mock-audit-core",
+    "prebuild": "npm run build --prefix ../packages/self-test-core && npm run build --prefix ../packages/mock-audit-core && npm run build --prefix ../packages/global-profile-chip-core && npm run build --prefix ../packages/global-command-palette-core",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "pretest": "npm run build --prefix ../packages/self-test-core && npm run build --prefix ../packages/mock-audit-core",
+    "pretest": "npm run build --prefix ../packages/self-test-core && npm run build --prefix ../packages/mock-audit-core && npm run build --prefix ../packages/global-profile-chip-core && npm run build --prefix ../packages/global-command-palette-core",
     "test": "node --test tests/*.test.js",
     "presmoke": "npm run build --prefix ../packages/self-test-core && npm run build --prefix ../packages/mock-audit-core",
-    "smoke": "node scripts/smoke.mjs"
+    "smoke": "node scripts/smoke.mjs",
+    "deploy:pages": "node scripts/deploy-pages.mjs"
   },
   "dependencies": {
+    "@tetherget/global-profile-chip-core": "file:../packages/global-profile-chip-core",
+    "@tetherget/global-command-palette-core": "file:../packages/global-command-palette-core",
     "@tetherget/self-test-core": "file:../packages/self-test-core",
     "@tetherget/mock-audit-core": "file:../packages/mock-audit-core",
     "react": "^19.2.6",
