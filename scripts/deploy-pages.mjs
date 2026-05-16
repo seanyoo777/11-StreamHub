@@ -2,7 +2,7 @@ import { execSync } from 'node:child_process'
 import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const root = dirname(fileURLToPath(new URL('..', import.meta.url)))
+const root = dirname(dirname(fileURLToPath(import.meta.url)))
 
 process.env.STREAMHUB_PAGES_BASE = '/11-StreamHub/'
 console.log('[deploy-pages] building with base', process.env.STREAMHUB_PAGES_BASE)
